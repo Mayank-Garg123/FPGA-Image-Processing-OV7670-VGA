@@ -1,1 +1,33 @@
-
+fpga-image-processing/
+│
+├── README.md
+│
+├── rtl/
+│   ├── top/
+│   │   └── systemTop.v
+│   │
+│   ├── camera/
+│   │   ├── ov7670_capture.v
+│   │   └── ov7670_sccb.v
+│   │
+│   ├── processing/
+│   │   ├── rgb565_to_gray.v
+│   │   ├── conv.v
+│   │   └── imageProcessTop.v
+│   │
+│   ├── vga/
+│   │   └── vga_controller.v
+│   │
+│   └── fifo/
+│       └── simple_async_fifo.v
+│
+├── constraints/
+│   └── zedboard_minimal.xdc
+│
+├── docs/
+│   ├── architecture.png
+│   ├── block_diagram.drawio
+│   └── methodology.pdf
+│
+└── simulation/
+    └── tb_image_pipeline.v
